@@ -57,6 +57,8 @@ appUpgrade.checkForUpdates(xApiKey: xApiKey, appInfo: appInfo, alertDialogConfig
 ### Note:
 1. For opening the app store the app should be live.
 2. It might not be able to open the app store in simulator. You can try it in physical device.
+3. You can find a sample app from here [app-upgrade-ios-demo-app](https://github.com/appupgrade-dev/app-upgrade-ios-swift-demo-app)
+4. Read detailed blog on how to integrate from here [How to upgrade/force upgrade iOS Swift app](https://appupgrade.dev/blog/how-to-force-upgrade-ios-swift-app)
 
 ## Screenshot
  ![forceupgrade_ios_swift](https://raw.githubusercontent.com/appupgrade-dev/app-upgrade-assets/main/images/forceupgrade_ios_swift.png)

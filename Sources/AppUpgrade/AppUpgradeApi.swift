@@ -21,7 +21,8 @@ public struct AppUpgradeApi {
         
         request.allHTTPHeaderFields = [
             "Content-Type": "application/json",
-            "x-api-key": xApiKey
+            "x-api-key": xApiKey,
+            "sdk": "ios-swift"
         ]
                         
         let task = URLSession.shared.dataTask(with: request as URLRequest, completionHandler: {(data, response, error) in

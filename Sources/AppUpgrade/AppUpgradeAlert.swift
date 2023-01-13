@@ -14,6 +14,7 @@ public struct AppUpgradeAlert {
         
         let updateButton = UIAlertAction(title: updateButtonTitle, style: .default, handler: { (action) -> Void in
             onUserUpdate(appId: appId)
+            UIApplication.shared.keyWindow?.rootViewController?.present(alert, animated: true)                                                                               
         })
 
         alert.addAction(updateButton)

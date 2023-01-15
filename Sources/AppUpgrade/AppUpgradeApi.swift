@@ -12,6 +12,7 @@ public struct AppUpgradeApi {
         queryParams["app_version"] = appInfo.appVersion
         queryParams["platform"] = appInfo.platform
         queryParams["environment"] = appInfo.environment
+        queryParams["app_language"] = appInfo.appLanguage
 
         components.queryItems = queryParams.map {k, v in URLQueryItem(name: k, value: v)}
     

@@ -4,15 +4,15 @@ All notable changes will be documented in this file.
 
 ## [1.0.5] - 2023-08-21
 
-* Add support for custom attribues
+* Add support for custom attributes
 
 ## [1.0.4] - 2023-07-04
 
-* Fix issues when version not found
+* Fix issues on version not found case.
 
 ## [1.0.3] - 2023-03-14
 
-* Migrate to appstore.com url
+* Migrate to appstore.com url from itunes.
 
 ## [1.0.2] - 2023-01-16
 

@@ -59,7 +59,7 @@ public struct AppUpgradeAlert {
     }
     
     private func openAppStore(appId: String) {
-        if let url = URL(string: "itms-apps://itunes.apple.com/app/id\(appId)"),
+        if let url = URL(string: "https://apps.apple.com/app/id\(appId)"),
             UIApplication.shared.canOpenURL(url){
             UIApplication.shared.open(url, options: [:]) { (opened) in
                 if(opened){

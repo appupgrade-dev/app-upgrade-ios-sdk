@@ -32,6 +32,36 @@ public struct AppInfo: Equatable {
                lhs.platform == rhs.platform &&
                lhs.environment == rhs.environment &&
                lhs.appLanguage == rhs.appLanguage &&
-               NSDictionary(dictionary: lhs.customAttributes ?? [:]).isEqual(to: rhs.customAttributes ?? [:])
+               areDictionariesEqual(lhs.customAttributes, rhs.customAttributes)
+    }
+    
+    private static func areDictionariesEqual(_ dict1: [String: Any]?, _ dict2: [String: Any]?) -> Bool {
+        guard let dict1 = dict1, let dict2 = dict2 else {
+            return dict1 == nil && dict2 == nil
+        }
+        
+        if dict1.count != dict2.count {
+            return false
+        }
+        
+        for (key, value1) in dict1 {
+            guard let value2 = dict2[key] else {
+                return false
+            }
+            
+            if !areEqual(value1, value2) {
+                return false
+            }
+        }
+        
+        return true
+    }
+    
+    private static func areEqual(_ value1: Any, _ value2: Any) -> Bool {
+        if let value1 = value1 as? Equatable, let value2 = value2 as? Equatable {
+            return value1 == value2
+        }
+        
+        return false
     }
 }

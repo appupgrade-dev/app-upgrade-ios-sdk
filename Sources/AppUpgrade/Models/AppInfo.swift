@@ -24,5 +24,15 @@ public struct AppInfo: Equatable {
         self.appLanguage = appLanguage
         self.customAttributes = customAttributes
     }
+
+    public static func ==(lhs: AppInfo, rhs: AppInfo) -> Bool {
+        return lhs.appId == rhs.appId &&
+               lhs.appName == rhs.appName &&
+               lhs.appVersion == rhs.appVersion &&
+               lhs.platform == rhs.platform &&
+               lhs.environment == rhs.environment &&
+               lhs.appLanguage == rhs.appLanguage &&
+               lhs.customAttributes == rhs.customAttributes
+    }
 }
 

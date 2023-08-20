@@ -13,7 +13,7 @@ public struct AppInfo: Equatable {
         appVersion: String,
         platform: String,
         environment: String,
-        appLanguage: String? = nil
+        appLanguage: String? = nil,
         customAttributes: [String: Any]? = nil
     ) {
         self.appId = appId

@@ -14,6 +14,12 @@ public struct AppUpgradeApi {
         queryParams["environment"] = appInfo.environment
         queryParams["app_language"] = appInfo.appLanguage
 
+        if let customAttributes = appInfo.customAttributes {
+            for (key, value) in customAttributes {
+                queryParams[key] = "\(value)"
+            }
+        }
+
         components.queryItems = queryParams.map {k, v in URLQueryItem(name: k, value: v)}
     
         var request = URLRequest(url: URL(string: components.string!)!)
